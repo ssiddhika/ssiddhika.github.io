@@ -33,8 +33,7 @@ const IntroSection = () => {
               Hi, I&apos;m Siddhika.
             </h1>
             <p className="hero-lead mt-6 hero-text max-w-xl mx-auto md:mx-0">
-              I&apos;m a final year software engineering and business student in Sydney who likes
-              building things that work — and explaining them so everyone in the room gets it.
+              I&apos;m a final year software engineering and business student in Sydney.  I like to build things, break things, and try to make tech a bit more human along the way.
             </p>
             <p className="hero-location mt-4 hero-text">Sydney, Australia</p>
 
