@@ -729,6 +729,82 @@ h6,
   margin: 0;
 }
 
+.about-photos-section {
+  margin-bottom: 2rem;
+}
+
+.about-photo--medium {
+  margin-top: 1.25rem;
+  max-width: 28rem;
+}
+
+.about-photo-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(176, 154, 199, 0.15);
+  max-width: 100%;
+}
+
+.about-photo-frame--medium {
+  line-height: 0;
+}
+
+.about-photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.about-photo-caption {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.about-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.about-photo-grid-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.about-photo-grid-frame {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(176, 154, 199, 0.15);
+}
+
+@media (min-width: 768px) {
+  .about-photo-grid-frame {
+    height: 280px;
+  }
+}
+
+[data-theme='portfolio-dark'] .about-photo-frame,
+[data-theme='portfolio-dark'] .about-photo-grid-frame {
+  box-shadow: 0 4px 16px rgba(196, 176, 216, 0.2);
+}
+
 .home-content .about-teaser {
   margin-top: 3.5rem;
 }

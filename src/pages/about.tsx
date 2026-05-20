@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import AboutPhoto from '../components/AboutPhoto';
 
 const experience = [
   {
@@ -7,6 +8,11 @@ const experience = [
     dates: 'August 2025 – Present',
     description:
       'Customer success and support under the APAC go-to-market team — applied AI validation, knowledge base work, and bridging engineering, sales, and support.',
+    image: {
+      src: '/images/stryde4.jpg',
+      alt: 'Siddhika at Stryde4 with Advanced Navigation',
+      caption: 'Out in the field at Stryde4 with Advanced Navigation',
+    },
   },
   {
     role: 'AI in Space Intern',
@@ -105,6 +111,14 @@ const AboutPage = () => {
                 <p className="about-timeline-company">{item.company}</p>
                 <p className="about-timeline-dates text-muted">{item.dates}</p>
                 <p className="about-timeline-desc text-muted">{item.description}</p>
+                {item.image && (
+                  <AboutPhoto
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    caption={item.image.caption}
+                    variant="medium"
+                  />
+                )}
               </li>
             ))}
           </ul>
@@ -123,6 +137,23 @@ const AboutPage = () => {
               None of that is on a product roadmap, but it&apos;s a big part of how I work with
               people.
             </p>
+          </div>
+        </section>
+
+        <section className="about-section about-photos-section" aria-label="Photos">
+          <div className="about-photo-grid">
+            <AboutPhoto
+              src="/images/confluence.jpg"
+              alt="At a team event wearing a Confluence shirt"
+              caption="Apparently I read a lot of Confluence pages"
+              variant="grid"
+            />
+            <AboutPhoto
+              src="/images/mentoring.jpg"
+              alt="UTS Business Mentor Award"
+              caption="UTS Business Mentor Award"
+              variant="grid"
+            />
           </div>
         </section>
       </article>
