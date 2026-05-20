@@ -21,10 +21,14 @@ const bodyFont = DM_Sans({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div
-      className={`${headingFont.variable} ${bodyFont.variable} ${bodyFont.className} min-h-screen bg-portfolio-bg text-portfolio-text`}
+      className={`site-shell ${headingFont.variable} ${bodyFont.variable} ${bodyFont.className} min-h-screen text-portfolio-text`}
     >
-      <Navbar />
-      <Component {...pageProps} />
+      <header className="site-header">
+        <Navbar />
+      </header>
+      <main className="site-main">
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </div>
   );

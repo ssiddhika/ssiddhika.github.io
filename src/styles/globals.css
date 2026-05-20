@@ -34,6 +34,12 @@
   --color-secondary-10: rgba(139, 158, 212, 0.1);
   --color-tertiary-10: rgba(176, 154, 199, 0.1);
 
+  /* Background pattern & hero blobs (5–8%) */
+  --color-dot-grid: rgba(139, 158, 212, 0.22);
+  --color-blob-pink: rgba(201, 123, 142, 0.06);
+  --color-blob-lavender: rgba(139, 158, 212, 0.07);
+  --color-blob-mauve: rgba(176, 154, 199, 0.06);
+
   /* Shadows & radius */
   --shadow-soft: 0 4px 24px rgba(45, 42, 53, 0.06);
   --shadow-card: 0 8px 32px rgba(45, 42, 53, 0.08);
@@ -69,6 +75,11 @@
   --color-secondary-10: rgba(158, 176, 224, 0.12);
   --color-tertiary-10: rgba(196, 176, 216, 0.12);
 
+  --color-dot-grid: rgba(158, 176, 224, 0.14);
+  --color-blob-pink: rgba(224, 149, 168, 0.07);
+  --color-blob-lavender: rgba(158, 176, 224, 0.08);
+  --color-blob-mauve: rgba(196, 176, 216, 0.07);
+
   --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.25);
   --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
@@ -82,6 +93,42 @@ body {
   color: var(--color-text);
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ——— Site-wide decorative background ——— */
+.site-shell {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+.site-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--color-bg);
+  background-image: radial-gradient(
+    circle,
+    var(--color-dot-grid) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  background-position: 0 0;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow: visible;
+}
+
+.site-main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 h1,
@@ -150,27 +197,47 @@ h6,
 }
 
 .hero-blob--pink {
-  width: 280px;
-  height: 280px;
-  top: -80px;
-  right: -60px;
-  background: var(--color-primary-12);
+  width: 320px;
+  height: 320px;
+  top: -100px;
+  right: -80px;
+  background: var(--color-blob-pink);
 }
 
 .hero-blob--lavender {
-  width: 220px;
-  height: 220px;
-  bottom: 10%;
-  left: -40px;
-  background: var(--color-secondary-10);
+  width: 260px;
+  height: 260px;
+  bottom: 8%;
+  left: -60px;
+  background: var(--color-blob-lavender);
 }
 
 .hero-blob--mauve {
-  width: 160px;
-  height: 160px;
-  top: 40%;
-  right: 20%;
-  background: var(--color-tertiary-10);
+  width: 200px;
+  height: 200px;
+  top: 35%;
+  right: 15%;
+  background: var(--color-blob-mauve);
+}
+
+/* Reusable corner blobs for other page heroes */
+.page-hero-decor {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-decor .hero-blob--pink {
+  width: 240px;
+  height: 240px;
+  top: -70px;
+  right: -50px;
+}
+
+.page-hero-decor .hero-blob--lavender {
+  width: 200px;
+  height: 200px;
+  bottom: -40px;
+  left: -50px;
 }
 
 .hero-name {
@@ -250,6 +317,7 @@ a:not(.btn):hover {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
   transition: background-color 0.25s ease, border-color 0.25s ease;
+  overflow: visible;
 }
 
 html {

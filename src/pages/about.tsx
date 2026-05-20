@@ -8,7 +8,10 @@ const AboutPage = () => {
         <title>About Me</title>
         <meta name="description" content="About Siddhika Prasad - Software Engineering and Business Student" />
       </Head>
-      <div className="p-8 max-w-screen-lg mx-auto bg-surface min-h-screen">
+      <div className="page-hero-decor p-8 max-w-screen-lg mx-auto min-h-screen">
+        <div className="hero-blob hero-blob--pink" aria-hidden="true" />
+        <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
+        <div className="relative z-10">
         {/* Introduction */}
         <section className="mb-16">
           <div className="flex flex-col md:flex-row items-center justify-between md:space-x-8">
@@ -114,6 +117,7 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+        </div>
       </div>
     </>
   );

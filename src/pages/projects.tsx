@@ -57,7 +57,10 @@ const ProjectPage = () => {
       <Head>
         <title>Projects</title>
       </Head>
-      <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16 bg-surface min-h-screen">
+      <div className="page-hero-decor min-h-screen">
+        <div className="hero-blob hero-blob--pink" aria-hidden="true" />
+        <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
+        <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16 relative z-10">
         <h1 className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-8">
           Projects
         </h1>
@@ -92,6 +95,7 @@ const ProjectPage = () => {
             </div>
           ))}
         </Carousel>
+        </div>
       </div>
     </>
   );

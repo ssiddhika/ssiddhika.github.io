@@ -7,8 +7,10 @@ const ContactPage = () => {
       <Head>
         <title>Contact Me</title>
       </Head>
-      <div className="flex items-center justify-center min-h-[70vh] py-12 px-4 lg:px-12 bg-surface">
-        <div className="w-full max-w-lg">
+      <div className="page-hero-decor flex items-center justify-center min-h-[70vh] py-12 px-4 lg:px-12">
+        <div className="hero-blob hero-blob--pink" aria-hidden="true" />
+        <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
+        <div className="w-full max-w-lg relative z-10">
           <div className="text-center mb-8">
             <h1 className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-4">
               Contact Me
