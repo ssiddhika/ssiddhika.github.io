@@ -145,7 +145,7 @@ const AboutPage = () => {
             <AboutPhoto
               src="/images/confluence.jpg"
               alt="At a team event wearing a Confluence shirt"
-              caption="Apparently I read a lot of Confluence pages"
+              caption="Read the most confluence pages in the entire company. Oops. "
               variant="grid"
             />
             <AboutPhoto

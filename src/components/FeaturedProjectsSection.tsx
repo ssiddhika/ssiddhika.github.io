@@ -8,6 +8,12 @@ const featuredProjects = [
     projectUrl: '/projects/project1',
   },
   {
+    title: 'Omada — Networking App',
+    outcome:
+      'Cross-platform Flutter app for sharing and organising contacts — built in 12 weeks at UTS Software Innovation Studio.',
+    projectUrl: '/projects/project5',
+  },
+  {
     title: 'MEP Supports Analysis Tool',
     outcome:
       'C# Navisworks plugin for Hilti, live in 12 weeks and cut manual quoting work.',
@@ -18,9 +24,10 @@ const featuredProjects = [
 const FeaturedProjectsSection = () => {
   return (
     <section className="home-projects-section">
-      <h2 className="font-heading text-2xl lg:text-3xl font-bold text-primary mb-8">
+      <h2 className="font-heading text-2xl lg:text-3xl font-bold text-primary mb-2">
         Some things I&apos;ve built
       </h2>
+      <p className="home-projects-aside text-muted mb-8">other than this website :)</p>
       <ul className="space-y-4">
         {featuredProjects.map((project) => (
           <li key={project.title}>

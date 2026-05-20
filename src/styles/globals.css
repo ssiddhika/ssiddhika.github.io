@@ -574,6 +574,18 @@ h6,
   padding-top: 0.25rem;
 }
 
+.home-projects-aside {
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+@media (min-width: 1024px) {
+  .home-projects-aside {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 1024px) {
   .home-projects-section {
     margin-top: 3rem;
@@ -803,6 +815,23 @@ h6,
 [data-theme='portfolio-dark'] .about-photo-frame,
 [data-theme='portfolio-dark'] .about-photo-grid-frame {
   box-shadow: 0 4px 16px rgba(196, 176, 216, 0.2);
+}
+
+/* ——— Project case studies ——— */
+.project-case-study .project-case-section {
+  margin-bottom: 2.5rem;
+}
+
+.project-case-study .project-case-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.project-case-image {
+  box-shadow: 0 4px 16px rgba(176, 154, 199, 0.15);
+}
+
+.project-case-tagline {
+  line-height: 1.55;
 }
 
 .home-content .about-teaser {
