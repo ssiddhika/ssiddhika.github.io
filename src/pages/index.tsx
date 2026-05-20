@@ -12,10 +12,11 @@ const Home = () => {
         <meta name="description" content="Siddhika Prasad&apos;s Software Engineering Portfolio" />
       </Head>
       <IntroSection />
-      
+      <div className="px-4 lg:px-8 max-w-screen-lg mx-auto space-y-8 pb-12">
       <AboutSection />
       <SkillsSection />
       <RecentProjectsSection />
+      </div>
     </>
   );
 };

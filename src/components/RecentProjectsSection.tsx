@@ -37,7 +37,7 @@ const RecentProjectsSection = () => {
   ];
 
   return (
-    <div className="bg-base-100 py-12 lg:py-16 rounded-lg shadow-xl">
+    <div className="section-card py-12 lg:py-16">
       <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg">
         <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8 text-center">
           Recently

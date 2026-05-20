@@ -2,47 +2,65 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 
-const HeroSection = () => {
+const IntroSection = () => {
   useEffect(() => {
-    gsap.fromTo('.hero-text', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, stagger: 0.2 });
-    gsap.fromTo('.hero-image', { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 1 });
+    gsap.fromTo(
+      '.hero-text',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: 'power2.out' }
+    );
+    gsap.fromTo(
+      '.hero-image',
+      { opacity: 0, x: 30 },
+      { opacity: 1, x: 0, duration: 1, ease: 'power2.out', delay: 0.2 }
+    );
   }, []);
 
   return (
-    <div className="bg-base-100 py-4 lg:pb-12 rounded-lg shadow-xl min-h-screen flex items-center">
-      <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg">
-        <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-          <div className="flex-1 min-w-0 md:mr-28 lg:mr-32">
-            <h1 className="text-5xl lg:text-6xl font-bold text-base-content mb-4 hero-text">
-              <span>Hi, I'm</span>
-              <div className="block">
-                <span className="typewriter bg-gradient-to-r from-primary to-neutral bg-clip-text text-transparent transition-all duration-500 hover:text-base-content">
-                  Siddhika.
-                </span>
-              </div>
+    <section className="hero-section">
+      <div className="hero-blob hero-blob--pink" aria-hidden="true" />
+      <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
+      <div className="hero-blob hero-blob--mauve" aria-hidden="true" />
+
+      <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg relative z-10 py-16 lg:py-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex-1 min-w-0 md:pr-8">
+            <h1 className="hero-name font-heading hero-text">
+              Siddhika Prasad
+              <span className="hero-name-underline" aria-hidden="true" />
             </h1>
-            <p className="text-lg lg:text-xl text-base-content hero-text">
-              Software engineering and business undergraduate.
+
+            <p className="hero-identity mt-8 hero-text">
+              Final-year Software Engineering and Human Resource Management student at UTS.
             </p>
-            <p className="text-lg lg:text-xl text-base-content hero-text">
-              With a love for continuous learning, tackling challenging problems and creating solutions that matter - 
-              I am eager in using technology to make an impact.
+            <p className="hero-identity mt-2 hero-text">
+              I build systems and work comfortably with engineers and non-technical stakeholders.
             </p>
-            <p className="text-secondary font-semibold text-lg mt-2 hero-text">📍 Sydney, Australia</p>
+
+            <p className="hero-current mt-8 hero-text">
+              <span className="hero-current-label">Currently</span>
+              {' — Application Engineering Intern at Advanced Navigation, validating applied AI workflows and supporting customers across APAC.'}
+            </p>
+
+            <p className="hero-meta mt-5 hero-text">
+              Sydney, Australia · Graduating November 2026
+            </p>
           </div>
-          <div className="relative flex-shrink-0 hero-image">
+
+          <div className="relative flex-shrink-0 hero-image hero-image-frame">
             <Image
               src="/images/IMG_6371.JPG"
-              alt="Siddhika"
+              alt="Siddhika Prasad"
               width={300}
               height={300}
-              className="rounded-xl shadow-lg transition-transform transform hover:scale-105"
+              className="rounded-[var(--radius-xl)]"
+              priority
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default HeroSection;
+export default IntroSection;

@@ -8,7 +8,7 @@ const AboutPage = () => {
         <title>About Me</title>
         <meta name="description" content="About Siddhika Prasad - Software Engineering and Business Student" />
       </Head>
-      <div className="p-8 max-w-screen-lg mx-auto">
+      <div className="p-8 max-w-screen-lg mx-auto bg-surface min-h-screen">
         {/* Introduction */}
         <section className="mb-16">
           <div className="flex flex-col md:flex-row items-center justify-between md:space-x-8">
@@ -24,7 +24,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <h1 className="text-4xl font-bold text-primary mb-4">About Me</h1>
+              <h1 className="font-heading text-4xl font-bold text-primary mb-4">About Me</h1>
               <p className="text-base-content text-lg">
               I am a curious developer, designer, and leader currently studying Software Engineering and Business at UTS. 
                 I’m passionate about using code, design, and communication to solve real-world problems and create meaningful impact.

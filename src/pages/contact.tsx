@@ -7,17 +7,17 @@ const ContactPage = () => {
       <Head>
         <title>Contact Me</title>
       </Head>
-      <div className="flex items-center justify-center min-h-screen py-8 px-4 lg:px-12">
+      <div className="flex items-center justify-center min-h-[70vh] py-12 px-4 lg:px-12 bg-surface">
         <div className="w-full max-w-lg">
           <div className="text-center mb-8">
-            <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+            <h1 className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-4">
               Contact Me
             </h1>
-            <p className="text-lg lg:text-xl text-base-content mb-4">
+            <p className="text-lg lg:text-xl text-muted mb-4">
               Want to get in touch? Connect with me on LinkedIn or GitHub.
             </p>
           </div>
-          <div className="bg-base-100 p-8 rounded-lg shadow-md">
+          <div className="section-card p-8">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
               <a
                 href="https://www.linkedin.com/in/siddhika-prasad/"
@@ -26,7 +26,7 @@ const ContactPage = () => {
                 className="flex flex-col items-center gap-3 text-primary hover:text-secondary transition-colors"
               >
                 <FaLinkedin size={48} />
-                <span className="text-lg font-semibold text-neutral">LinkedIn</span>
+                <span className="text-lg font-semibold text-portfolio-muted">LinkedIn</span>
               </a>
               <a
                 href="https://github.com/ssiddhika"
@@ -35,7 +35,7 @@ const ContactPage = () => {
                 className="flex flex-col items-center gap-3 text-primary hover:text-secondary transition-colors"
               >
                 <FaGithub size={48} />
-                <span className="text-lg font-semibold text-neutral">GitHub</span>
+                <span className="text-lg font-semibold text-portfolio-muted">GitHub</span>
               </a>
             </div>
           </div>

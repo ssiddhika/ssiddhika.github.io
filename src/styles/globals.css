@@ -2,20 +2,327 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ——— Portfolio colour system (light) ——— */
+:root,
+[data-theme='portfolio'] {
+  /* Surfaces */
+  --color-bg: #fdf8f6;
+  --color-bg-alt: #faf7ff;
+  --color-card: #ffffff;
+  --color-card-tint: #fef9fd;
+  --color-hero-mid: #faf5f8;
+
+  /* Accents */
+  --color-primary: #c97b8e;
+  --color-primary-soft: #d4849a;
+  --color-secondary: #8b9ed4;
+  --color-secondary-soft: #9ba8d4;
+  --color-tertiary: #b09ac7;
+  --color-tertiary-soft: #a891c0;
+
+  /* Text */
+  --color-text: #2d2a35;
+  --color-text-muted: #6b6575;
+
+  /* UI */
+  --color-border: #e8e2f0;
+  --color-border-strong: #ddd6ea;
+  --color-navbar: rgba(253, 248, 246, 0.85);
+
+  /* Soft overlays (decorative) */
+  --color-primary-12: rgba(201, 123, 142, 0.12);
+  --color-secondary-10: rgba(139, 158, 212, 0.1);
+  --color-tertiary-10: rgba(176, 154, 199, 0.1);
+
+  /* Shadows & radius */
+  --shadow-soft: 0 4px 24px rgba(45, 42, 53, 0.06);
+  --shadow-card: 0 8px 32px rgba(45, 42, 53, 0.08);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+}
+
+/* ——— Portfolio colour system (dark) ——— */
+[data-theme='portfolio-dark'] {
+  --color-bg: #1a1820;
+  --color-bg-alt: #221f2a;
+  --color-card: #2a2733;
+  --color-card-tint: #2e2b38;
+  --color-hero-mid: #231f28;
+
+  --color-primary: #e095a8;
+  --color-primary-soft: #eca8b8;
+  --color-secondary: #9eb0e0;
+  --color-secondary-soft: #b0bfe8;
+  --color-tertiary: #c4b0d8;
+  --color-tertiary-soft: #d0c0e4;
+
+  --color-text: #f5f2f8;
+  --color-text-muted: #a9a3b5;
+
+  --color-border: #3d3848;
+  --color-border-strong: #4a4556;
+  --color-navbar: rgba(26, 24, 32, 0.9);
+
+  --color-primary-12: rgba(224, 149, 168, 0.15);
+  --color-secondary-10: rgba(158, 176, 224, 0.12);
+  --color-tertiary-10: rgba(196, 176, 216, 0.12);
+
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Typewriter effect */
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-@keyframes blink {
-  0% { border-right-color: transparent; }
-  50% { border-right-color: black; }
-  100% { border-right-color: transparent; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+/* DaisyUI / Tailwind semantic aliases */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-surface {
+  background-color: var(--color-bg);
+}
+
+.bg-surface-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.bg-card {
+  background-color: var(--color-card);
+}
+
+.border-soft {
+  border-color: var(--color-border);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+/* ——— Hero ——— */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    145deg,
+    var(--color-bg) 0%,
+    var(--color-hero-mid) 42%,
+    var(--color-bg-alt) 100%
+  );
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-blob--pink {
+  width: 280px;
+  height: 280px;
+  top: -80px;
+  right: -60px;
+  background: var(--color-primary-12);
+}
+
+.hero-blob--lavender {
+  width: 220px;
+  height: 220px;
+  bottom: 10%;
+  left: -40px;
+  background: var(--color-secondary-10);
+}
+
+.hero-blob--mauve {
+  width: 160px;
+  height: 160px;
+  top: 40%;
+  right: 20%;
+  background: var(--color-tertiary-10);
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.hero-name-underline {
+  display: block;
+  height: 4px;
+  width: min(100%, 14rem);
+  margin-top: 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-soft) 0%,
+    var(--color-secondary) 55%,
+    var(--color-tertiary) 100%
+  );
+  opacity: 0.85;
+}
+
+.hero-identity {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.hero-current {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.hero-current-label {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.hero-meta {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.hero-image-frame {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+/* Cards & sections */
+.section-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.section-panel {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+/* Links */
+a:not(.btn):hover {
+  transition: color 0.2s ease;
+}
+
+/* Navbar */
+.navbar-portfolio {
+  background-color: var(--color-navbar);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+html {
+  color-scheme: light;
+}
+
+[data-theme='portfolio-dark'] {
+  color-scheme: dark;
+}
+
+body,
+.navbar-portfolio,
+.section-card,
+.hero-section {
+  transition: background-color 0.25s ease, color 0.2s ease, border-color 0.25s ease;
+}
+
+/* DaisyUI button softening */
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-soft) !important;
+  border-color: var(--color-primary-soft) !important;
+}
+
+.btn-outline.btn-primary {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  background-color: transparent !important;
+}
+
+.btn-outline.btn-primary:hover {
+  background-color: var(--color-primary-12) !important;
+  color: var(--color-primary) !important;
+}
+
+.badge-primary {
+  background-color: var(--color-primary-12) !important;
+  color: var(--color-primary) !important;
+  border: none;
+}
+
+.menu li > *:hover,
+.menu li > *:focus {
+  background-color: var(--color-primary-12);
+  color: var(--color-primary);
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-card) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-soft) !important;
+}
+
+/* Legacy typewriter — toned down for new palette */
+@keyframes blink-soft {
+  0%,
+  100% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: var(--color-primary);
+  }
 }
 
 .parallax {
@@ -24,27 +331,9 @@ html {
   background-position: center;
 }
 
-.typewriter {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: 
-    typewriter 2s steps(40, end) forwards,
-    blink .75s step-end infinite;
-}
-
-.typewriter-delay {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: 
-    typewriter 2s steps(40, end) 2s forwards,
-    blink .75s step-end infinite 2s;
-}
-
-/* Ensuring z-index context */
-body, .container, .section {
+body,
+.container,
+.section {
   position: relative;
   z-index: 1;
 }
