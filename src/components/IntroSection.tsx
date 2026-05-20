@@ -27,6 +27,9 @@ const IntroSection = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-14 flex-1">
           <div className="flex-1 min-w-0 text-center md:text-left w-full">
             <h1 className="hero-greeting font-heading hero-text">
+              <span className="hero-wave" aria-hidden="true">
+                👋
+              </span>
               Hi, I&apos;m Siddhika.
             </h1>
             <p className="hero-lead mt-6 hero-text max-w-xl mx-auto md:mx-0">
