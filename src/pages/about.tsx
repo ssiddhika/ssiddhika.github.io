@@ -1,124 +1,131 @@
-import Image from 'next/image';
 import Head from 'next/head';
+
+const experience = [
+  {
+    role: 'Application Engineering Intern',
+    company: 'Advanced Navigation',
+    dates: 'August 2025 – Present',
+    description:
+      'Customer success and support under the APAC go-to-market team — applied AI validation, knowledge base work, and bridging engineering, sales, and support.',
+  },
+  {
+    role: 'AI in Space Intern',
+    company: 'Powerhouse Museum',
+    dates: 'July 2025',
+    description:
+      'Co-designed and facilitated a program on spacecraft design, generative AI, and technology ethics with Space Machines Company and ING Bank.',
+  },
+  {
+    role: 'Software Engineering Intern',
+    company: 'Optik Consultancy',
+    dates: 'November 2023 – February 2024',
+    description:
+      'Built and deployed a Navisworks plugin in C# for Hilti Australia within 12 weeks.',
+  },
+];
 
 const AboutPage = () => {
   return (
     <>
       <Head>
-        <title>About Me</title>
-        <meta name="description" content="About Siddhika Prasad - Software Engineering and Business Student" />
+        <title>About me — Siddhika Prasad</title>
+        <meta
+          name="description"
+          content="About Siddhika Prasad — software engineering and business student at UTS, based in Sydney."
+        />
       </Head>
-      <div className="page-hero-decor p-8 max-w-screen-lg mx-auto min-h-screen">
-        <div className="hero-blob hero-blob--pink" aria-hidden="true" />
-        <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
-        <div className="relative z-10">
-        {/* Introduction */}
-        <section className="mb-16">
-          <div className="flex flex-col md:flex-row items-center justify-between md:space-x-8">
-            <div className="w-full md:w-1/2 mb-6 md:mb-0">
-              <div className="relative w-full h-64">
-                <Image
-                  src="/images/Grad.jpg"
-                  alt="Siddhika Prasad"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-            <div className="w-full md:w-1/2 text-center md:text-left">
-              <h1 className="font-heading text-4xl font-bold text-primary mb-4">About Me</h1>
-              <p className="text-base-content text-lg">
-              I am a curious developer, designer, and leader currently studying Software Engineering and Business at UTS. 
-                I’m passionate about using code, design, and communication to solve real-world problems and create meaningful impact.
-              </p>
-              <p className="text-base-content text-lg mt-4">
-                I love building systems from the ground up and collaborating with people who care about making tech more human.
-              </p>
-            </div>
+
+      <article className="about-page">
+        <h1 className="about-page-title font-heading">About me</h1>
+
+        <section className="about-section" aria-labelledby="about-bio">
+          <div id="about-bio" className="about-prose">
+            <p>
+              I&apos;m in my final year — out of five! — studying software engineering and
+              business at UTS, graduating November 2026.
+            </p>
+            <p>
+              I chose these degrees because I wanted to build cool things in tech and understand
+              the humans behind the problems. Engineering and HRM felt like an odd combination at
+              first, but the more I&apos;ve worked in the real world the more sense it makes.
+            </p>
+            <p>
+              For the last ten months I&apos;ve been at Advanced Navigation, a deep tech Australian
+              company, working in customer success and support under their go-to-market team.
+              It&apos;s been one of those experiences that teaches you more than you expected — I
+              came in thinking it was mostly technical work and left knowing a lot more about sales
+              cycles, customer centricity, and what it actually takes to get engineering teams and
+              customers on the same page.
+            </p>
+            <p>
+              Before that I built and shipped software for construction tech, co-led a startup
+              project that got funded by Business NSW, and helped run the first AI in Space workshop
+              at the Powerhouse Museum.
+            </p>
+            <p>
+              It&apos;s still very early in my career. I&apos;m learning something new every day
+              which, honestly, is exactly where I want to be right now.
+            </p>
+          </div>
+
+          <a
+            href="/resume.pdf"
+            download="Siddhika_Prasad_Resume.pdf"
+            className="btn btn-outline btn-primary rounded-full mt-10 about-resume-btn"
+          >
+            Download resume
+          </a>
+        </section>
+
+        <section className="about-section" aria-labelledby="about-education">
+          <h2 id="about-education" className="about-section-heading font-heading">
+            Education
+          </h2>
+          <div className="about-education-block">
+            <p className="about-education-degree font-heading">
+              Bachelor of Engineering (Honours) / Bachelor of Business
+            </p>
+            <p className="about-education-meta text-muted">
+              University of Technology Sydney · 2022 – 2026
+            </p>
+            <p className="about-education-detail">
+              Majors in Software Engineering and Human Resource Management · WAM 75+
+            </p>
           </div>
         </section>
 
-        {/* Education & Growth */}
-        <section className="mb-16">
-          <div className="flex flex-col md:flex-row items-center justify-between md:space-x-8">
-            <div className="w-full md:w-1/2 text-center md:text-left">
-              <h2 className="text-3xl font-bold text-secondary mb-2">Education & Growth</h2>
-              <h3 className="text-xl font-medium text-info mb-4">University of Technology Sydney</h3>
-              <p className="text-lg text-base-content ">
-                I’m currently pursuing a double degree in Software Engineering and Human Resource Management. 
-                My academic journey has been shaped by hands-on projects, mentorship roles, and internships.
-              </p>
-              <p className="text-base-content text-lg mt-4">
-                These experiences have taught me to think critically, lead effectively, and build with empathy. 
-                I thrive in environments where curiosity and continuous learning are valued.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2 mt-6 md:mt-0">
-              <div className="relative w-full h-64">
-                <Image
-                  src="/images/SUNSET.jpg"
-                  alt="UTS Sunset"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-          </div>
+        <section className="about-section" aria-labelledby="about-experience">
+          <h2 id="about-experience" className="about-section-heading font-heading">
+            Experience
+          </h2>
+          <ul className="about-timeline">
+            {experience.map((item) => (
+              <li key={`${item.company}-${item.dates}`} className="about-timeline-item">
+                <h3 className="about-timeline-role font-heading">{item.role}</h3>
+                <p className="about-timeline-company">{item.company}</p>
+                <p className="about-timeline-dates text-muted">{item.dates}</p>
+                <p className="about-timeline-desc text-muted">{item.description}</p>
+              </li>
+            ))}
+          </ul>
         </section>
 
-        {/* Experience & Impact */}
-        <section>
-        <div className="flex flex-col md:flex-row items-center justify-between md:space-x-8">
-        <div className="w-full md:w-1/2 mb-6 md:mb-6">
-      <div className="relative w-full h-64">
-        <Image
-          src="/images/AAA.jpg"
-          alt="Siddhika at AAA awards"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-xl shadow-lg"
-        />       
-        
-      </div>
-      <div className="w-full md:w-1/2 mb-6 md:mb-6"></div>
-      <div className="relative w-full h-64">
-        <Image
-          src="/images/Award.jpg"
-          alt="Siddhika with Dean"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-xl shadow-lg"
-        />       
-        
-      </div>
-      
-            </div>
-            <div className="w-full md:w-1/2 text-center md:text-left">
-              <h2 className="text-3xl font-bold text-primary mb-4">Experience & Impact</h2>
-              <ul className="list-disc list-inside text-base-content text-lg space-y-4">
-                <li>
-                  <strong>Engineering Intern at Optik Consultancy:</strong> Developed a plugin for Hilti to automate MEP design workflows using Autodesk Navisworks and .NET.
-                </li>
-                <li>
-                  <strong>AI in Space Intern at Powerhouse Museum:</strong> Co-facilitated a 3-day student workshop on spacecraft design and AI ethics with Space Machines Company.
-                </li>
-                <li>
-                  <strong>Project Co-Lead at AusBizGrowth.ai:</strong> Built a full-stack web app to identify high-growth SMEs; successfully pitched to Business NSW.
-                </li>
-                <li>
-                  <strong>UTS Business School Mentor:</strong> Mentored over 50 students and co-led workshops for 200+ attendees, helping build inclusive classroom environments.
-                </li>
-                <li>
-                  <strong>Head Teacher at Code Camp:</strong> Delivered engaging STEM classes, increasing student retention by 35% through strong facilitation and communication.
-                </li>
-              </ul>
-            </div>
+        <section className="about-section" aria-labelledby="about-other">
+          <h2 id="about-other" className="about-section-heading font-heading">
+            A few other things
+          </h2>
+          <div className="about-aside">
+            <p>
+              Outside internships I&apos;ve mentored 75+ first-year business students at UTS and
+              co-delivered workshops to hundreds more. I&apos;ve taught at Code Camp, where our team
+              helped lift enrolments, and I&apos;ve been a student ambassador for the Faculty of
+              Engineering and IT and a gender equity ambassador for Women in Engineering and IT.
+              None of that is on a product roadmap, but it&apos;s a big part of how I work with
+              people.
+            </p>
           </div>
         </section>
-        </div>
-      </div>
+      </article>
     </>
   );
 };

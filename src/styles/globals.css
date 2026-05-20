@@ -580,6 +580,155 @@ h6,
   }
 }
 
+/* ——— About page ——— */
+.about-page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .about-page {
+    padding: 4rem 2rem 6rem;
+  }
+}
+
+.about-page-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+}
+
+.about-section {
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .about-section {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+.about-section-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.about-prose {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 42rem;
+}
+
+.about-prose p {
+  margin: 0;
+}
+
+.about-resume-btn {
+  font-weight: 600;
+}
+
+.about-education-block {
+  max-width: 36rem;
+}
+
+.about-education-degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.about-education-meta {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-education-detail {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.about-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 2px solid var(--color-border);
+  max-width: 40rem;
+}
+
+.about-timeline-item {
+  position: relative;
+  padding-bottom: 2.25rem;
+}
+
+.about-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.about-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.5rem - 1px);
+  top: 0.45rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 3px var(--color-bg);
+}
+
+.about-timeline-role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.2rem;
+}
+
+.about-timeline-company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.15rem;
+}
+
+.about-timeline-dates {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-timeline-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-aside {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  max-width: 42rem;
+}
+
+.about-aside p {
+  margin: 0;
+}
+
 .home-content .about-teaser {
   margin-top: 3.5rem;
 }
