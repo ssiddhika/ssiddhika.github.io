@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import IntroSection from '../components/IntroSection';
 import RightNowSection from '../components/RightNowSection';
+import TechUsedSection from '../components/TechUsedSection';
 import FeaturedProjectsSection from '../components/FeaturedProjectsSection';
 import AboutTeaserSection from '../components/AboutTeaserSection';
 
@@ -20,6 +21,7 @@ const Home = () => {
         className="home-content px-6 lg:px-8 max-w-screen-lg mx-auto pb-20 pt-4"
       >
         <RightNowSection />
+        <TechUsedSection />
         <FeaturedProjectsSection />
         <AboutTeaserSection />
       </div>
