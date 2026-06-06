@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import SectionHeading from '../../components/SectionHeading';
 
 const PITCH_URL =
   'https://www.canva.com/design/DAG25j8cht4/pzidE1VgMKwdbECfezk1iA/edit';
@@ -16,9 +17,9 @@ const Project5 = () => {
       </Head>
       <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16">
         {/* Title */}
-        <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+        <SectionHeading as="h1" className="mb-4">
           Omada — Networking App
-        </h1>
+        </SectionHeading>
         <p className="text-lg text-base-content mb-8">
           A cross-platform mobile app for sharing and organising contact details, built in 12 weeks
           for UTS Software Innovation Studio.
@@ -36,7 +37,7 @@ const Project5 = () => {
 
         {/* Overview */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Overview</h2>
+          <SectionHeading className="section-heading--sm mb-3">Overview</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             Sharing contact details at events and networking situations is still surprisingly
             awkward — business cards get lost, phone number exchanges are clunky, and there&apos;s
@@ -53,7 +54,7 @@ const Project5 = () => {
 
         {/* My Role */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">My Role</h2>
+          <SectionHeading className="section-heading--sm mb-3">My Role</SectionHeading>
           <ul className="list-disc list-inside text-base lg:text-lg text-base-content space-y-2">
             <li>Contributed to cross-platform UI development in Flutter</li>
             <li>
@@ -70,7 +71,7 @@ const Project5 = () => {
 
         {/* Impact & Outcomes */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Impact & Outcomes</h2>
+          <SectionHeading className="section-heading--sm mb-3">Impact & Outcomes</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             Omada was delivered as a working product within the 12-week studio timeframe. The
             project sharpened my understanding of mobile development with Flutter, product scoping
@@ -93,7 +94,7 @@ const Project5 = () => {
 
         {/* Skills & Tools */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Skills & Tools</h2>
+          <SectionHeading className="section-heading--sm mb-3">Skills & Tools</SectionHeading>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="badge badge-outline">Flutter</span>
             <span className="badge badge-outline">Dart</span>

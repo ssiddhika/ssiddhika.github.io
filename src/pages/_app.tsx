@@ -1,12 +1,13 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import { Plus_Jakarta_Sans, DM_Sans } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
 
-const headingFont = Plus_Jakarta_Sans({
+const headingFont = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['600', '700'],
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
   variable: '--font-heading',
   display: 'swap',
 });

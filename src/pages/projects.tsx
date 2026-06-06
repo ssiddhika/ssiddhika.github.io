@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Carousel from 'react-multi-carousel';
+import SectionHeading from '../components/SectionHeading';
 import 'react-multi-carousel/lib/styles.css';
 
 const projects = [
@@ -70,9 +71,9 @@ const ProjectPage = () => {
         <div className="hero-blob hero-blob--pink" aria-hidden="true" />
         <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
         <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16 relative z-10">
-          <h1 className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-8">
+          <SectionHeading as="h1" className="mb-8">
             Projects
-          </h1>
+          </SectionHeading>
           <p className="text-lg lg:text-xl text-muted mb-10 max-w-2xl leading-relaxed">
             A mix of university projects, internship work, and things built just to see if
             they&apos;d work. Some shipped, some taught me a lot, all of them meant something at
@@ -96,7 +97,7 @@ const ProjectPage = () => {
                   </div>
                   <div className="project-card-body p-4 flex flex-col flex-grow relative">
                     <p className="project-card-category">{project.category}</p>
-                    <h3 className="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-heading text-xl font-semibold text-secondary mb-2 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-base-content text-sm lg:text-base leading-relaxed">

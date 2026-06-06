@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SectionHeading from './SectionHeading';
 
 const featuredProjects = [
   {
@@ -24,10 +25,10 @@ const featuredProjects = [
 const FeaturedProjectsSection = () => {
   return (
     <section className="home-projects-section">
-      <h2 className="font-heading text-2xl lg:text-3xl font-bold text-primary mb-2">
-        Some things I&apos;ve built
-      </h2>
-      <p className="home-projects-aside text-muted mb-8">other than this website :)</p>
+      <SectionHeading className="mb-2">Some things I&apos;ve built</SectionHeading>
+      <p className="home-projects-aside caption text-muted mb-8">
+        other than this website :)
+      </p>
       <ul className="space-y-4">
         {featuredProjects.map((project) => (
           <li key={project.title}>

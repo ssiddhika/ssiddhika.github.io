@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import SectionHeading from '../../components/SectionHeading';
 
 const Project3 = () => {
   return (
@@ -14,9 +15,9 @@ const Project3 = () => {
 
       <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16">
         {/* Title */}
-        <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+        <SectionHeading as="h1" className="mb-4">
           Personal Portfolio Website
-        </h1>
+        </SectionHeading>
         <p className="text-lg text-base-content mb-8">
           A modern, interactive portfolio site built to showcase my work, skills, and interests as a software engineering and business student.
         </p>
@@ -33,7 +34,7 @@ const Project3 = () => {
 
         {/* Overview */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Overview</h2>
+          <SectionHeading className="section-heading--sm mb-3">Overview</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             I built this site to reflect my personal brand and provide a dedicated space to share my projects, technical skills, and achievements. Designed with responsiveness and accessibility in mind, it also serves as a practical exercise in full-stack development.
           </p>
@@ -42,7 +43,7 @@ const Project3 = () => {
 
         {/* Features */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Key Features</h2>
+          <SectionHeading className="section-heading--sm mb-3">Key Features</SectionHeading>
           <ul className="list-disc list-inside text-base lg:text-lg text-base-content space-y-2">
             <li>Fully responsive design using Tailwind CSS</li>
             <li>GSAP and Framer Motion animations for smooth transitions</li>
@@ -55,7 +56,7 @@ const Project3 = () => {
 
         {/* Tech Stack */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Technologies Used</h2>
+          <SectionHeading className="section-heading--sm mb-3">Technologies Used</SectionHeading>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="badge badge-outline">Next.js</span>
             <span className="badge badge-outline">TypeScript</span>
@@ -69,7 +70,7 @@ const Project3 = () => {
 
         {/* Lessons Learned */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Lessons Learned</h2>
+          <SectionHeading className="section-heading--sm mb-3">Lessons Learned</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             This project helped me deepen my front-end skills while learning the ins and outs of deployment, animations, and responsive UX design. I also gained experience managing components, state, and optimising for performance.
           </p>

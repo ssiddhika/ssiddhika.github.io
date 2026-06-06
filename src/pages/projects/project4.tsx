@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import SectionHeading from '../../components/SectionHeading';
 
 const Project4 = () => {
   return (
@@ -10,9 +11,9 @@ const Project4 = () => {
       </Head>
       <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16">
         {/* Title */}
-        <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+        <SectionHeading as="h1" className="mb-4">
           AI in Space Workshop
-        </h1>
+        </SectionHeading>
         <p className="text-lg text-base-content mb-8">
           A three-day student innovation workshop on spacecraft design and AI ethics, held at the Powerhouse Museum in collaboration with ING Bank and Space Machines Company.
         </p>
@@ -29,7 +30,7 @@ const Project4 = () => {
 
         {/* Overview */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Overview</h2>
+          <SectionHeading className="section-heading--sm mb-3">Overview</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             As part of Powerhouse's Creative Studios program, I co-facilitated a workshop series introducing high school students to the intersection of artificial intelligence and space technology. Students collaborated in teams to design spacecrafts and discuss ethical AI decision-making in extreme environments.
           </p>
@@ -40,7 +41,7 @@ const Project4 = () => {
 
         {/* My Role */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">My Role</h2>
+          <SectionHeading className="section-heading--sm mb-3">My Role</SectionHeading>
           <ul className="list-disc list-inside text-base lg:text-lg text-base-content space-y-2">
             <li>Co-designed workshop content alongside UTS and Space Machines Company engineers</li>
             <li>Led student groups through design challenges and interactive activities</li>
@@ -51,7 +52,7 @@ const Project4 = () => {
 
         {/* Impact & Outcomes */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Impact & Outcomes</h2>
+          <SectionHeading className="section-heading--sm mb-3">Impact & Outcomes</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             The workshop helped students explore career paths in space, AI, and engineering through hands-on learning. It also fostered critical thinking around ethical technology development.
           </p>
@@ -62,7 +63,7 @@ const Project4 = () => {
 
         {/* Skills & Tools */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Skills & Tools</h2>
+          <SectionHeading className="section-heading--sm mb-3">Skills & Tools</SectionHeading>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="badge badge-outline">Workshop Design</span>
             <span className="badge badge-outline">Facilitation</span>

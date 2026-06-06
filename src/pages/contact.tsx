@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import SectionHeading from '../components/SectionHeading';
 
 const ContactPage = () => {
   return (
@@ -12,9 +13,9 @@ const ContactPage = () => {
         <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
         <div className="w-full max-w-lg relative z-10">
           <div className="text-center mb-8">
-            <h1 className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-4">
+            <SectionHeading as="h1" className="mb-4 justify-center">
               Contact Me
-            </h1>
+            </SectionHeading>
             <p className="text-lg lg:text-xl text-muted mb-4">
               Want to get in touch? Connect with me on LinkedIn or GitHub.
             </p>

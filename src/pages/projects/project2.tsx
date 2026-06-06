@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import SectionHeading from '../../components/SectionHeading';
 
 const Project6 = () => {
   return (
@@ -14,9 +15,9 @@ const Project6 = () => {
 
       <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16">
         {/* Title */}
-        <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Hilti’s MEP Supports Tool
-        </h1>
+        <SectionHeading as="h1" className="mb-4">
+          Hilti&apos;s MEP Supports Tool
+        </SectionHeading>
         <p className="text-lg text-base-content mb-8">
           A Navisworks plugin that automates the analysis of BIM (Building Information Modelling) designs for MEP (Mechanical, Electrical, Plumbing) support structures — helping streamline Hilti’s quotation workflow.
         </p>
@@ -33,7 +34,7 @@ const Project6 = () => {
 
         {/* Project Overview */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Project Overview</h2>
+          <SectionHeading className="section-heading--sm mb-3">Project Overview</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             Completed during my 2023 Summer internship at Optik Consultancy, this project involved designing and developing a Navisworks plugin for Hilti. Working in a cross-functional team over 12 weeks, we created a tool to help automate the quotation process for MEP supports in construction designs.
           </p>
@@ -44,7 +45,7 @@ const Project6 = () => {
 
         {/* Project Details */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Project Details</h2>
+          <SectionHeading className="section-heading--sm mb-3">Project Details</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             Hilti receives BIM files containing MEP elements requiring structural supports like T-posts or trapezes. Traditionally, estimating these supports for quotations is manual and time-consuming.
           </p>
@@ -55,7 +56,7 @@ const Project6 = () => {
 
         {/* Solution Process */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Solution Workflow</h2>
+          <SectionHeading className="section-heading--sm mb-3">Solution Workflow</SectionHeading>
           <ul className="list-disc list-inside text-base lg:text-lg text-base-content space-y-2">
             <li>Open a Navisworks file and select MEP components.</li>
             <li>Activate the custom plugin to start analysis.</li>
@@ -69,7 +70,7 @@ const Project6 = () => {
 
         {/* Tech Stack */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Technologies Used</h2>
+          <SectionHeading className="section-heading--sm mb-3">Technologies Used</SectionHeading>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="badge badge-outline">C#</span>
             <span className="badge badge-outline">.NET Framework</span>
@@ -82,7 +83,7 @@ const Project6 = () => {
 
         {/* Lessons Learned */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Lessons Learned</h2>
+          <SectionHeading className="section-heading--sm mb-3">Lessons Learned</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             This project introduced me to the construction tech industry and gave me deep exposure to BIM workflows. I learned how to integrate external APIs, conduct rigorous testing, and collaborate in an agile scrum team.
           </p>

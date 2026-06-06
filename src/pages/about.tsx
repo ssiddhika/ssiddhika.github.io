@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import AboutPhoto from '../components/AboutPhoto';
+import SectionHeading from '../components/SectionHeading';
 
 const experience = [
   {
@@ -42,7 +43,9 @@ const AboutPage = () => {
       </Head>
 
       <article className="about-page">
-        <h1 className="about-page-title font-heading">About me</h1>
+        <SectionHeading as="h1" className="about-page-title">
+          About me
+        </SectionHeading>
 
         <section className="about-section" aria-labelledby="about-bio">
           <div id="about-bio" className="about-prose">
@@ -84,9 +87,9 @@ const AboutPage = () => {
         </section>
 
         <section className="about-section" aria-labelledby="about-education">
-          <h2 id="about-education" className="about-section-heading font-heading">
+          <SectionHeading id="about-education" className="about-section-heading">
             Education
-          </h2>
+          </SectionHeading>
           <div className="about-education-block">
             <p className="about-education-degree font-heading">
               Bachelor of Engineering (Honours) / Bachelor of Business
@@ -101,9 +104,9 @@ const AboutPage = () => {
         </section>
 
         <section className="about-section" aria-labelledby="about-experience">
-          <h2 id="about-experience" className="about-section-heading font-heading">
+          <SectionHeading id="about-experience" className="about-section-heading">
             Experience
-          </h2>
+          </SectionHeading>
           <ul className="about-timeline">
             {experience.map((item) => (
               <li key={`${item.company}-${item.dates}`} className="about-timeline-item">
@@ -125,9 +128,9 @@ const AboutPage = () => {
         </section>
 
         <section className="about-section" aria-labelledby="about-other">
-          <h2 id="about-other" className="about-section-heading font-heading">
+          <SectionHeading id="about-other" className="about-section-heading">
             A few other things
-          </h2>
+          </SectionHeading>
           <div className="about-aside">
             <p>
               Outside internships I&apos;ve mentored 75+ first-year business students at UTS and

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import SectionHeading from '../../components/SectionHeading';
 
 const Project1 = () => {
   return (
@@ -10,9 +11,9 @@ const Project1 = () => {
       </Head>
       <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg py-12 lg:py-16">
         {/* Title */}
-        <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+        <SectionHeading as="h1" className="mb-4">
           SME Growth Recommender Platform
-        </h1>
+        </SectionHeading>
         <p className="text-lg text-base-content mb-8">
           A web-based tool built to help identify and support high-growth potential small to medium enterprises (SMEs) through automated insights and advanced filtering.
         </p>
@@ -29,7 +30,7 @@ const Project1 = () => {
 
         {/* Overview */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Project Overview</h2>
+          <SectionHeading className="section-heading--sm mb-3">Project Overview</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             Developed during a real-world software studio subject at UTS, our team of eight built a working demonstrator platform for SMEs@UTS and Business NSW. I served as co-lead and interim team lead, collaborating with stakeholders and a data science team to identify key growth indicators for SMEs.
           </p>
@@ -40,7 +41,7 @@ const Project1 = () => {
 
         {/* Problem & Opportunity */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Problem & Opportunity</h2>
+          <SectionHeading className="section-heading--sm mb-3">Problem & Opportunity</SectionHeading>
           <ul className="list-disc list-inside text-base lg:text-lg text-base-content space-y-2">
             <li><strong>Problem:</strong> SME identification was manual, time-consuming, and lacked digital tools.</li>
             <li><strong>Opportunity:</strong> Automate the discovery of high-growth SMEs through custom search criteria and data integration.</li>
@@ -50,7 +51,7 @@ const Project1 = () => {
 
         {/* Key Features */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Solution Features</h2>
+          <SectionHeading className="section-heading--sm mb-3">Solution Features</SectionHeading>
           <ul className="list-disc list-inside text-base lg:text-lg text-base-content space-y-2">
             <li>User registration and authentication</li>
             <li>Customizable preferences and notification settings</li>
@@ -62,7 +63,7 @@ const Project1 = () => {
 
         {/* Tech Stack */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Technologies Used</h2>
+          <SectionHeading className="section-heading--sm mb-3">Technologies Used</SectionHeading>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="badge badge-outline">TypeScript</span>
             <span className="badge badge-outline">Next.js</span>
@@ -77,7 +78,7 @@ const Project1 = () => {
 
         {/* Lessons Learned */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Lessons Learned</h2>
+          <SectionHeading className="section-heading--sm mb-3">Lessons Learned</SectionHeading>
           <p className="text-base lg:text-lg text-base-content mb-4">
             This project strengthened my leadership, teamwork, and project management skills in a simulated agile environment. I led sprint planning and retrospectives, managed stakeholder expectations, and used industry-standard tools to ensure team efficiency.
           </p>
@@ -88,7 +89,7 @@ const Project1 = () => {
 
         {/* Project Link */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-3">Live Demo</h2>
+          <SectionHeading className="section-heading--sm mb-3">Live Demo</SectionHeading>
           <p className="text-base lg:text-lg text-base-content">
             Check out the live platform here:{' '}
             <a 

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
+import WaveDivider from './WaveDivider';
 
 const IntroSection = () => {
   useEffect(() => {
@@ -19,11 +20,20 @@ const IntroSection = () => {
 
   return (
     <section className="hero-section">
+      <span className="hero-sparkle hero-sparkle--1" aria-hidden="true">
+        ✦
+      </span>
+      <span className="hero-sparkle hero-sparkle--2" aria-hidden="true">
+        ✦
+      </span>
+      <span className="hero-sparkle hero-sparkle--3" aria-hidden="true">
+        ✦
+      </span>
       <div className="hero-blob hero-blob--pink" aria-hidden="true" />
       <div className="hero-blob hero-blob--lavender" aria-hidden="true" />
       <div className="hero-blob hero-blob--mauve" aria-hidden="true" />
 
-      <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg relative z-10 py-16 lg:py-24 flex flex-col min-h-[88vh]">
+      <div className="container mx-auto px-8 lg:px-12 max-w-screen-lg relative z-10 py-16 lg:py-24 flex flex-col flex-1 min-h-[80vh]">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-14 flex-1">
           <div className="flex-1 min-w-0 text-center md:text-left w-full">
             <h1 className="hero-greeting font-heading hero-text">
@@ -79,6 +89,7 @@ const IntroSection = () => {
           </svg>
         </a>
       </div>
+      <WaveDivider />
     </section>
   );
 };

@@ -4,6 +4,7 @@ import RightNowSection from '../components/RightNowSection';
 import TechUsedSection from '../components/TechUsedSection';
 import FeaturedProjectsSection from '../components/FeaturedProjectsSection';
 import AboutTeaserSection from '../components/AboutTeaserSection';
+import SectionDivider from '../components/SectionDivider';
 
 const Home = () => {
   return (
@@ -18,11 +19,14 @@ const Home = () => {
       <IntroSection />
       <div
         id="home-content"
-        className="home-content px-6 lg:px-8 max-w-screen-lg mx-auto pb-20 pt-4"
+        className="home-content px-6 lg:px-8 max-w-screen-lg mx-auto pb-20 pt-8"
       >
         <RightNowSection />
+        <SectionDivider />
         <TechUsedSection />
+        <SectionDivider />
         <FeaturedProjectsSection />
+        <SectionDivider />
         <AboutTeaserSection />
       </div>
     </>

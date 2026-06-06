@@ -1,3 +1,5 @@
+import SectionHeading from './SectionHeading';
+
 const skillGroups = [
   {
     label: 'Languages',
@@ -41,7 +43,9 @@ const skillGroups = [
 const TechUsedSection = () => {
   return (
     <section className="home-tech-section" aria-label="Some tech I've used">
-      <h2 className="home-tech-title font-heading">Some tech I&apos;ve used</h2>
+      <SectionHeading className="home-tech-title">
+        Some tech I&apos;ve used
+      </SectionHeading>
       <div className="space-y-5">
         {skillGroups.map((group) => (
           <div key={group.label}>
