@@ -57,6 +57,15 @@
   --chip-blue-text: #5c4a72;
   --chip-peach-bg: rgba(201, 160, 180, 0.22);
   --chip-peach-text: #8a5a6e;
+
+  /* Buttons */
+  --btn-primary-text: #ffffff;
+  --btn-primary-glow: rgba(212, 132, 154, 0.38);
+  --btn-outline-text: #6b3548;
+  --btn-outline-border: var(--accent-primary);
+  --btn-outline-hover-bg: rgba(212, 132, 154, 0.12);
+  --btn-outline-hover-text: #ffffff;
+  --btn-focus-ring: rgba(212, 132, 154, 0.45);
 }
 
 /* ——— Portfolio colour system (dark) ——— */
@@ -104,6 +113,14 @@
   --chip-blue-text: #d8cce8;
   --chip-peach-bg: rgba(212, 176, 196, 0.2);
   --chip-peach-text: #f0d8e4;
+
+  --btn-primary-text: #ffffff;
+  --btn-primary-glow: rgba(224, 154, 176, 0.5);
+  --btn-outline-text: #f5dce8;
+  --btn-outline-border: #e09ab0;
+  --btn-outline-hover-bg: rgba(224, 154, 176, 0.2);
+  --btn-outline-hover-text: #ffffff;
+  --btn-focus-ring: rgba(224, 154, 176, 0.55);
 }
 
 html {
@@ -1068,38 +1085,73 @@ body,
   transition: background-color 0.25s ease, color 0.2s ease, border-color 0.25s ease;
 }
 
-/* DaisyUI button — soft gradient, no harsh shadows */
-.btn-primary {
+/* DaisyUI button — soft gradient, readable in light & dark */
+.btn {
+  text-decoration: none;
+}
+
+.btn.btn-primary,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:focus-visible,
+.btn.btn-primary:active {
   background: linear-gradient(
     135deg,
     var(--accent-primary) 0%,
     var(--accent-secondary) 100%
   ) !important;
   border: none !important;
-  color: #fff !important;
+  color: var(--btn-primary-text) !important;
   border-radius: var(--radius-pill) !important;
   box-shadow: none !important;
   font-weight: 500;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, color 0.2s ease;
 }
 
-.btn-primary:hover {
-  box-shadow: 0 0 22px rgba(212, 132, 154, 0.38) !important;
+.btn.btn-primary:hover {
+  box-shadow: 0 0 22px var(--btn-primary-glow) !important;
   transform: translateY(-1px);
 }
 
-.btn-outline.btn-primary {
-  color: var(--accent-primary) !important;
-  border: 1.5px solid var(--accent-primary) !important;
-  background-color: transparent !important;
-  border-radius: var(--radius-pill) !important;
-  box-shadow: none !important;
+.btn.btn-primary:focus-visible {
+  outline: 2px solid var(--btn-focus-ring);
+  outline-offset: 2px;
 }
 
-.btn-outline.btn-primary:hover {
-  background-color: var(--color-primary-12) !important;
-  color: var(--accent-primary) !important;
-  box-shadow: 0 0 18px rgba(212, 132, 154, 0.2) !important;
+.btn.btn-outline.btn-primary,
+.btn.btn-outline.btn-primary:focus,
+.btn.btn-outline.btn-primary:active {
+  color: var(--btn-outline-text) !important;
+  border: 1.5px solid var(--btn-outline-border) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-radius: var(--radius-pill) !important;
+  box-shadow: none !important;
+  font-weight: 500;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.2s ease,
+    color 0.2s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn.btn-outline.btn-primary:hover,
+.btn.btn-outline.btn-primary:focus-visible {
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary) 0%,
+    var(--accent-secondary) 100%
+  ) !important;
+  border-color: transparent !important;
+  color: var(--btn-outline-hover-text) !important;
+  box-shadow: 0 0 18px var(--btn-primary-glow) !important;
+  transform: translateY(-1px);
+}
+
+.btn.btn-outline.btn-primary:focus-visible {
+  outline: 2px solid var(--btn-focus-ring);
+  outline-offset: 2px;
 }
 
 .badge-primary {

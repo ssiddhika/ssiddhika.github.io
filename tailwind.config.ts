@@ -65,7 +65,7 @@ const config: Config = {
         },
         'portfolio-dark': {
           primary: '#E09AB0',
-          'primary-content': '#1E1418',
+          'primary-content': '#FFFFFF',
           secondary: '#C4B3D8',
           'secondary-content': '#F8EEF2',
           accent: '#D4B0C4',
