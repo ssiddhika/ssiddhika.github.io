@@ -56,7 +56,7 @@ const IntroSection = () => {
 
           <div className="relative flex-shrink-0 hero-image hero-image-frame mx-auto md:mx-0">
             <Image
-              src="/images/sid_headshot.png"
+              src="/images/1788677994048-1.jpg" 
               alt="Siddhika Prasad"
               width={280}
               height={280}
